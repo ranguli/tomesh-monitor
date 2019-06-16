@@ -20,7 +20,10 @@ def index():
    result = []
    
    for name in adapters:
-      ip = ni.ifaddresses(name)[ni.AF_INET][0]['addr']
+      try:
+         ip = ni.ifaddresses(name)[ni.AF_INET][0]['addr']
+      except:
+         ip = "Not assigned."
       status = subprocess.getoutput("cat /sys/class/net/" + name + "/operstate")
       adapter = Adapter(name, ip, status)
       print(name)
