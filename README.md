@@ -5,7 +5,7 @@ A small Flask-based status monitor for LCD-enabled Raspberry Pi-based nodes in t
 
 ## To-Do:
 - [x] Setup a working Flask app
-- [x] Detect the name, IP and up/down status of allphysical network interfaces
+- [x] Detect the name, IP and up/down status of all physical network interfaces
 - [ ] Add third column for IPv6 addresses
 - [ ] Detect the hostname (Usually tomesh-xxxx in the case of a tomesh node)
 - [ ] Display the time in top right corner?
