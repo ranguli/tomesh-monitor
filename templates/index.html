@@ -6,6 +6,7 @@
     <div class="box">
         <img class="logo" src="{{ url_for('static', filename='img/tomesh_white.png') }}"></img>
         <h1 class="title">Toronto Mesh</h1>
+        <h2 class="subtitle"> {{ hostname }} </h2>
         <hr>
         <table id="adapters">
             {% for adapter in adapters%}
