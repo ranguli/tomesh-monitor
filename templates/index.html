@@ -14,6 +14,7 @@
             <tr id="adapter_{{ adapter.name }}">
                 <th class="status_{{ adapter.status }}"> {{ adapter.name}} </th>
                 <td> {{ adapter.ipv4 }} </td>
+                <td> {{ adapter.iface_type }} </td>
             </tr>
             {% endfor %}
         </table>
