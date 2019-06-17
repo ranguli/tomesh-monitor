@@ -1,5 +1,6 @@
 import netifaces as ni
 import subprocess
+import socket
 
 from flask import Flask, request, render_template, json
 
@@ -26,13 +27,17 @@ def interfaces():
 
     return result
 
+@app.route('/hostname')
+def hostname():
+    return socket.gethostname()
+
 @app.route('/interfaces')
 def interfaces_as_json_string():
     return json.dumps([vars(interface) for interface in interfaces()])
 
 @app.route('/')
 def index():
-    return render_template('index.html', adapters=interfaces())
+    return render_template('index.html', adapters=interfaces(), hostname=hostname())
 
 if __name__ == '__main__':
     app.run(debug = False)

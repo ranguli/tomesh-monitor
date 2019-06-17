@@ -24,6 +24,14 @@ body {
     text-align: center;
 }
 
+.subtitle {
+    font-size: 100%;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+
+}
+
 .menubar {
     height: auto;
     background-color: black;
