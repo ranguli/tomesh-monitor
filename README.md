@@ -4,14 +4,10 @@ This is a small Python (Flask) web app designed to display the status of a node 
 ![screenshot](screenshot.png)
 
 ## To-Do:
-- [x] Setup a working Flask app
-- [x] Detect the name, IP and up/down status of all physical network interfaces
 - [ ] Add third column for IPv6 addresses
 - [ ] Move to Tomesh GitHub organization
 - [ ] Turn script into systemd service
 - [ ] Make script a module for cjdns-prototype-pi
-- [ ] Detect the hostname (Usually tomesh-xxxx in the case of a tomesh node)
-- [ ] Display the time in top right corner?
 - [ ] Perform the same detections as the [status](https://github.com/tomeshnet/prototype-cjdns-pi/blob/master/scripts/status) bash script, and display the status of the following:
   - [ ] Mesh Point Interface
   - [ ] Yggdrasil
@@ -22,6 +18,11 @@ This is a small Python (Flask) web app designed to display the status of a node 
   - [ ] Node Explorer
   - [ ] Prometheus
   - [ ] Grafana
+- [x] Setup a working Flask app
+- [x] Detect the name, IP and up/down status of all physical network interfaces
+- [x] Check for status / IP changes using async
+- [x] Display the time in top right corner
+- [x] Detect the hostname (Usually tomesh-xxxx in the case of a tomesh node)
 
 ## Setup
 - Install Raspbian Lite on your Pi. Ensure SSH is enabled if you need it.
