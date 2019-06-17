@@ -1,4 +1,4 @@
-async function update() {
+async function updateInterfaces() {
     const updatedInterfaces = await (await fetch('interfaces')).json();
     const currentInterfaceElements = [...document.getElementById('adapters').childNodes[1].childNodes].filter((elm) => elm.tagName === 'TR');
 
@@ -15,37 +15,14 @@ async function update() {
     }
 }
 
-
-window.onload = function() {
-
-    // Restart button
-    document.getElementById("restart").onclick = function() {
-        window.location.reload();
-    };
-
-    // Clock 
-    clock();  
-    function clock() {
-        var now = new Date();
-        var TwentyFourHour = now.getHours();
-        var hour = now.getHours();
-        var min = now.getMinutes();
-        var mid = 'PM';
-        if (min < 10) {
-            min = "0" + min;
-        }
-        if (hour > 12) {
-            hour = hour - 12;
-        }    
-        if(hour==0){ 
-            hour=12;
-        }
-        if(TwentyFourHour < 12) {
-            mid = 'AM';
-        } 
-        document.getElementById('time').innerHTML = hour+':'+min+''+mid;
-        setTimeout(clock, 1000);
-    }
+function clock() {
+    document.getElementById('time').innerHTML = new Date().toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', hour12: true});
 }
 
-setInterval(update, 3000);
+window.onload = () => {
+    document.getElementById("restart").onclick = () => window.location.reload();
+
+    setInterval(clock, 1000);
+    setInterval(updateInterfaces, 3000);
+    clock();
+}
