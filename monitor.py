@@ -6,8 +6,8 @@ from flask import Flask, request, render_template, json
 app = Flask(__name__)
 
 class Adapter():
-    def __init__(self, name, ip, status):
-        self.ip = ip
+    def __init__(self, name, ipv4, status):
+        self.ipv4 = ipv4
         self.name = name
         self.status = status
 
@@ -17,11 +17,11 @@ def interfaces():
 
     for name in adapters:
         try:
-            ip = ni.ifaddresses(name)[ni.AF_INET][0]['addr']
+            ipv4 = ni.ifaddresses(name)[ni.AF_INET][0]['addr'] or "Not assigned"
         except:
-            ip = "Not assigned."
+            ipv4 = "Unassigned."
         status = subprocess.getoutput("cat /sys/class/net/" + name + "/operstate")
-        adapter = Adapter(name, ip, status)
+        adapter = Adapter(name, ipv4, status)
         result.append(adapter)
 
     return result

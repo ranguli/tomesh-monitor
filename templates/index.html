@@ -11,7 +11,7 @@
             {% for adapter in adapters%}
             <tr id="adapter_{{ adapter.name }}">
                 <th class="status_{{ adapter.status }}"> {{ adapter.name}} </th>
-                <td> {{ adapter.ip }} </td>
+                <td> {{ adapter.ipv4 }} </td>
             </tr>
             {% endfor %}
         </table>
