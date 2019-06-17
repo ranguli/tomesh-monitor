@@ -15,7 +15,6 @@ async function update() {
     }
 }
 
-
 window.onload = function() {
     document.getElementById("restart").onclick = function() {
         window.location.reload();
