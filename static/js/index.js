@@ -9,7 +9,7 @@ async function update() {
                 elem.className = `status_${newInfo.status}`
             }
             else if (elem.tagName === 'TD') {
-                elem.innerText = newInfo.ip;
+                elem.innerText = newInfo.ipv4;
             }
         }
     }
