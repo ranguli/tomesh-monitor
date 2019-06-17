@@ -15,4 +15,11 @@ async function update() {
     }
 }
 
-setTimeout(update, 3000);
+
+window.onload = function() {
+    document.getElementById("restart").onclick = function() {
+        window.location.reload();
+    };
+};
+
+setInterval(update, 3000);
