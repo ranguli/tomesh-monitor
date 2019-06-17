@@ -15,4 +15,4 @@ async function update() {
     }
 }
 
-setTimeout(update, 3000);
+setInterval(update, 3000);
