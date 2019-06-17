@@ -27,7 +27,14 @@ This is a small Python (Flask) web app designed to display the status of a node 
 ## Setup
 - Install Raspbian Lite on your Pi. Ensure SSH is enabled if you need it.
 
-- Configure your LCD display in `/boot/config.txt`, in the case of my 3.5" LCD I had to add:
+- Configure your LCD display. In my case I had to install drivers:
+  ```bash
+  git clone https://github.com/goodtft/LCD-show
+  chmod -R 755 ./LCD-show && cd ./LCD-show
+  ./MPI-3508-show
+  ```
+  
+  Among other things, it modifies by `/boot/config.txt` by adding:
   ```
   hdmi_force_hotplug=1
   config_hdmi_boost=7
