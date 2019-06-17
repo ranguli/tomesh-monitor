@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
-<div class="box">
-  <img class="logo" src="{{ url_for('static', filename='img/tomesh_white.png') }}"></img>
-  <h1 class="title"> Toronto Mesh</h1>
-  <hr>
-  <table>
-    {% for adapter in adapters%}
-      <tr>
-        {% if adapter.status == "up" %}
-          <th class="status_green"> {{ adapter.name}} </th>
-        {% elif adapter.status == "down" %}
-          <th class="status_red"> {{ adapter.name}} </th>
-        {% endif %}
-        <td> {{ adapter.ip}} </td>
-      </tr>
-    {% endfor %}
-  </table>
-</div>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="box">
+        <img class="logo" src="{{ url_for('static', filename='img/tomesh_white.png') }}"></img>
+        <h1 class="title">Toronto Mesh</h1>
+        <hr>
+        <table id="adapters">
+            {% for adapter in adapters%}
+            <tr id="adapter_{{ adapter.name }}">
+                <th class="status_{{ adapter.status }}"> {{ adapter.name}} </th>
+                <td> {{ adapter.ip }} </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <script src="{{ url_for('static', filename='js/update.js') }}"></script>
+</body>
 </html>

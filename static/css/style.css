@@ -1,4 +1,4 @@
-@font-face { 
+@font-face {
     font-family: "worksans";
     src: url("../fonts/WorkSans-Bold.woff") format('woff');
 }
@@ -11,11 +11,6 @@ body {
     font-style: normal;
     margin: 0;
     padding: 0;
-
-}
-
-.box {
-
 }
 
 .title {
@@ -34,21 +29,19 @@ body {
     background-color: black;
     margin: 0%;
     padding: 0%;
-
 }
 
 .logo {
     width: 15%;
     margin: 0;
     padding: 0;
-    
 }
 
-.status_green{
+.status_up {
     color: rgb(2, 194, 2);
 }
 
-.status_red{
+.status_down {
     color: rgb(194, 2, 2);
 }
 
