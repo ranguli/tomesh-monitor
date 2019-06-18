@@ -35,7 +35,7 @@ This is a small Python (Flask) web app designed to display the status of a node 
   hdmi_force_hotplug=1
   hdmi_group=2
   hdmi_mode=87
-  hdmi_cvt 480 320 60 6 0 0 0
+  hdmi_cvt 1280 720 60 6 0 0 0
   ```
 - We assume you _do not_ already have a working X11 environment. We will be installing the minimum packages needed as not to consume unecessary resources.
 
@@ -61,7 +61,7 @@ This is a small Python (Flask) web app designed to display the status of a node 
   @unclutter & 
   @python3 /home/pi/tomesh-monitor/monitor.py &
   @sed -i 's/"exited_cleanly": false/"exited_cleanly": true/' ~/.config/chromium-browser Default/Preferences
-  @chromium-browser --noerrdialogs --kiosk http://127.0.0.1:5000 --incognito --disable-translate
+  @chromium-browser --noerrdialogs --window-size=1280,720 --kiosk http://127.0.0.1:5000 --incognito --disable-translate
   ```
   
   If you want the full LXDE desktop environment to also load in the background (if you think you may want to use it) then keep/don't delete these lines:
