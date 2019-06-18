@@ -24,8 +24,7 @@ body {
     color: #fff;
     font-size: 300%;
     line-height: 1em;
-    margin: 0;
-    padding: 0;
+    margin-bottom: 0;
     text-align: center;
 }
 
@@ -45,8 +44,11 @@ body {
 }
 
 .logo {
-    width: 15%;
-    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10%;
+    margin: 10px;
     padding: 0;
 }
 
@@ -60,14 +62,27 @@ body {
 
 table {
     width: 100%;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 2%;
+    padding-right: 2%;
     text-align: left;
+}
+
+#services {
+    font-size: 75%;
+
 }
 
 tr, td, th {
     font-size: 125%;
 
+}
+
+.blank_row {
+    height: 200px !important;
+}
+
+.small {
+    font-size: 75%;
 }
 
 #restart{
@@ -77,8 +92,8 @@ tr, td, th {
     background-size: cover;
     margin: 10px;
     border-radius: 6px;
-    width: 10%;
-    height: 10%;
+    width: 100px;
+    height: 100px;
     opacity: 0.5;
     position: absolute;
     background-color: #888;

@@ -14,9 +14,28 @@
             <tr id="adapter_{{ adapter.name }}">
                 <th class="status_{{ adapter.status }}"> {{ adapter.name}} </th>
                 <td> {{ adapter.ipv4 }} </td>
-                <td> {{ adapter.iface_type }} </td>
+                <td> {{ adapter.ipv4 }} </td>
+                <td> {{ adapter.ipv4 }} </td>
             </tr>
             {% endfor %}
+            <tr class="blank_row"></tr>
+            <tr class="small">
+                <th>cjdns</th>
+                <td>yggdrasil</td>
+                <td>ipfs</td>
+                <td>ssb</td>
+            </tr>   
+            <tr class="small">
+                <th>prometheus-node</th>
+                <td>prometheus-server</td>
+                <td>grafana</td>
+                <td>yrd</td>
+            </tr>
+            <tr class="small">
+                <th> process-stream</th>
+                <td> hostapd </td>
+            </tr>
+
         </table>
     </div>
     <div id="restart"> </div>
