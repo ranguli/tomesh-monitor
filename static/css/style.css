@@ -3,11 +3,16 @@
     src: url("../fonts/WorkSans-Bold.woff") format('woff');
 }
 
+p {
+    font-size: 150%;
+}
+
 body {
     background-color: #333;
     color: #fff;
     font-family: 'worksans';
     font-weight: normal;
+    font-size: 175%;
     font-style: normal;
     margin: 0;
     padding: 0;
@@ -17,7 +22,7 @@ body {
     font-weight: 700;
     font-stretch: 100%;
     color: #fff;
-    font-size: 250%;
+    font-size: 300%;
     line-height: 1em;
     margin: 0;
     padding: 0;
@@ -25,7 +30,7 @@ body {
 }
 
 .subtitle {
-    font-size: 100%;
+    font-size: 175%;
     text-align: center;
     margin: 5px;
     padding: 5px;
@@ -60,6 +65,11 @@ table {
     text-align: left;
 }
 
+tr, td, th {
+    font-size: 125%;
+
+}
+
 #restart{
     background-image: url("/static/img/restart.png");
     background-position: center;
@@ -67,14 +77,13 @@ table {
     background-size: cover;
     margin: 10px;
     border-radius: 6px;
-    width: 48px;
-    height: 48px;
+    width: 10%;
+    height: 10%;
     opacity: 0.5;
     position: absolute;
     background-color: #888;
     bottom: 0;
     right: 0;
-
 }
 
 #time {
@@ -82,7 +91,4 @@ table {
     top: 0;
     right: 0;
     margin: 10px;
-
-
-
 }
