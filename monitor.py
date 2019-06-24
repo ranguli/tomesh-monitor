@@ -13,6 +13,7 @@ class Adapter():
         self.status = status
 
 def interfaces():
+    # Only retrieve *physical* network interfaces
     adapters = subprocess.getoutput("find /sys/class/net -type l -not -lname '*virtual*' -printf '%f\n'").split()
     result = []
 
